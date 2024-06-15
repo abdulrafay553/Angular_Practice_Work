@@ -1,0 +1,28 @@
+<p>home works!</p>
+<hr />
+<br />
+<!-- Flag value = {{ flag }} -->
+<div *ngFor="let mydata of city">
+  <h1>{{ mydata }}</h1>
+</div>
+<br />
+
+<div *ngFor="let mydata1 of cityjson">
+  <h1>{{ mydata1.name }} - {{ mydata1.code }}</h1>
+</div>
+<br />
+
+<div [ngSwitch]="color">
+  <h1 *ngSwitchCase="'red'" style="background-color: red">ANGULAR BLOG</h1>
+  <h1 *ngSwitchCase="'green'" style="background-color: green">ANGULAR BLOG</h1>
+</div>
+<br />
+
+<h1 *ngIf="flag; else otherBlock">WELCOME</h1>
+<h1 *ngIf="username == 'admin'; then trueBlock; else falseBlock">
+  ADMIN LOGIN
+</h1>
+
+<ng-template #otherBlock> <h1>NO WELCOME</h1> </ng-template>
+<ng-template #trueBlock> <h1>ADMIN USER</h1> </ng-template>
+<ng-template #falseBlock> <h1>GUEST USER</h1> </ng-template>
